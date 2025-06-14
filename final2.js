@@ -205,104 +205,104 @@ function prev(){
 //     }, 20); // 이 간격이면 자연스러운 떨림처럼 보임
 
 // }
-let interval;
-function putBox() {
-    clearInterval(interval);
-    $("#mbox").empty();
+// let interval;
+// function putBox() {
+//     clearInterval(interval);
+//     $("#mbox").empty();
 
-    const boxSize = 50;
-    const areaWidth = $("#mbox").width();
-    const areaHeight = $("#mbox").height();
+//     const boxSize = 50;
+//     const areaWidth = $("#mbox").width();
+//     const areaHeight = $("#mbox").height();
 
-    // 박스 좌표 및 방향 개별 변수로 선언
-    let x1 = 100, y1 = 100, dx1 = 1, dy1 = 1;
-    let x2 = 200, y2 = 150, dx2 = -1, dy2 = 1;
-    let x3 = 50, y3 = 200, dx3 = 1, dy3 = -1;
-    let x4 = 300, y4 = 50, dx4 = -1, dy4 = -1;
-    let x5 = 250, y5 = 200, dx5 = 1, dy5 = 1;
+//     // 박스 좌표 및 방향 개별 변수로 선언
+//     let x1 = 100, y1 = 100, dx1 = 1, dy1 = 1;
+//     let x2 = 200, y2 = 150, dx2 = -1, dy2 = 1;
+//     let x3 = 50, y3 = 200, dx3 = 1, dy3 = -1;
+//     let x4 = 300, y4 = 50, dx4 = -1, dy4 = -1;
+//     let x5 = 250, y5 = 200, dx5 = 1, dy5 = 1;
 
-    // 박스 5개 추가
-    $("#mbox").append("<div id='box1' class='box'></div>");
-    $("#mbox").append("<div id='box2' class='box'></div>");
-    $("#mbox").append("<div id='box3' class='box'></div>");
-    $("#mbox").append("<div id='box4' class='box'></div>");
-    $("#mbox").append("<div id='box5' class='box'></div>");
+//     // 박스 5개 추가
+//     $("#mbox").append("<div id='box1' class='box'></div>");
+//     $("#mbox").append("<div id='box2' class='box'></div>");
+//     $("#mbox").append("<div id='box3' class='box'></div>");
+//     $("#mbox").append("<div id='box4' class='box'></div>");
+//     $("#mbox").append("<div id='box5' class='box'></div>");
 
-    // 초기 위치 및 색 지정
-    $("#box1").css({ left: x1, top: y1, backgroundColor: randomColor() });
-    $("#box2").css({ left: x2, top: y2, backgroundColor: randomColor() });
-    $("#box3").css({ left: x3, top: y3, backgroundColor: randomColor() });
-    $("#box4").css({ left: x4, top: y4, backgroundColor: randomColor() });
-    $("#box5").css({ left: x5, top: y5, backgroundColor: randomColor() });
+//     // 초기 위치 및 색 지정
+//     $("#box1").css({ left: x1, top: y1, backgroundColor: randomColor() });
+//     $("#box2").css({ left: x2, top: y2, backgroundColor: randomColor() });
+//     $("#box3").css({ left: x3, top: y3, backgroundColor: randomColor() });
+//     $("#box4").css({ left: x4, top: y4, backgroundColor: randomColor() });
+//     $("#box5").css({ left: x5, top: y5, backgroundColor: randomColor() });
 
-    // 박스 움직이기
-    interval = setInterval(function () {
-        // box1
-        x1 += dx1;
-        y1 += dy1;
-        if (x1 <= 0 || x1 >= areaWidth - boxSize) {
-            dx1 *= -1;
-            $("#box1").css("backgroundColor", randomColor());
-        }
-        if (y1 <= 0 || y1 >= areaHeight - boxSize) {
-            dy1 *= -1;
-            $("#box1").css("backgroundColor", randomColor());
-        }
-        $("#box1").css({ left: x1, top: y1 });
+//     // 박스 움직이기
+//     interval = setInterval(function () {
+//         // box1
+//         x1 += dx1;
+//         y1 += dy1;
+//         if (x1 <= 0 || x1 >= areaWidth - boxSize) {
+//             dx1 *= -1;
+//             $("#box1").css("backgroundColor", randomColor());
+//         }
+//         if (y1 <= 0 || y1 >= areaHeight - boxSize) {
+//             dy1 *= -1;
+//             $("#box1").css("backgroundColor", randomColor());
+//         }
+//         $("#box1").css({ left: x1, top: y1 });
 
-        // box2
-        x2 += dx2;
-        y2 += dy2;
-        if (x2 <= 0 || x2 >= areaWidth - boxSize) {
-            dx2 *= -1;
-            $("#box2").css("backgroundColor", randomColor());
-        }
-        if (y2 <= 0 || y2 >= areaHeight - boxSize) {
-            dy2 *= -1;
-            $("#box2").css("backgroundColor", randomColor());
-        }
-        $("#box2").css({ left: x2, top: y2 });
+//         // box2
+//         x2 += dx2;
+//         y2 += dy2;
+//         if (x2 <= 0 || x2 >= areaWidth - boxSize) {
+//             dx2 *= -1;
+//             $("#box2").css("backgroundColor", randomColor());
+//         }
+//         if (y2 <= 0 || y2 >= areaHeight - boxSize) {
+//             dy2 *= -1;
+//             $("#box2").css("backgroundColor", randomColor());
+//         }
+//         $("#box2").css({ left: x2, top: y2 });
 
-        // box3
-        x3 += dx3;
-        y3 += dy3;
-        if (x3 <= 0 || x3 >= areaWidth - boxSize) {
-            dx3 *= -1;
-            $("#box3").css("backgroundColor", randomColor());
-        }
-        if (y3 <= 0 || y3 >= areaHeight - boxSize) {
-            dy3 *= -1;
-            $("#box3").css("backgroundColor", randomColor());
-        }
-        $("#box3").css({ left: x3, top: y3 });
+//         // box3
+//         x3 += dx3;
+//         y3 += dy3;
+//         if (x3 <= 0 || x3 >= areaWidth - boxSize) {
+//             dx3 *= -1;
+//             $("#box3").css("backgroundColor", randomColor());
+//         }
+//         if (y3 <= 0 || y3 >= areaHeight - boxSize) {
+//             dy3 *= -1;
+//             $("#box3").css("backgroundColor", randomColor());
+//         }
+//         $("#box3").css({ left: x3, top: y3 });
 
-        // box4
-        x4 += dx4;
-        y4 += dy4;
-        if (x4 <= 0 || x4 >= areaWidth - boxSize) {
-            dx4 *= -1;
-            $("#box4").css("backgroundColor", randomColor());
-        }
-        if (y4 <= 0 || y4 >= areaHeight - boxSize) {
-            dy4 *= -1;
-            $("#box4").css("backgroundColor", randomColor());
-        }
-        $("#box4").css({ left: x4, top: y4 });
+//         // box4
+//         x4 += dx4;
+//         y4 += dy4;
+//         if (x4 <= 0 || x4 >= areaWidth - boxSize) {
+//             dx4 *= -1;
+//             $("#box4").css("backgroundColor", randomColor());
+//         }
+//         if (y4 <= 0 || y4 >= areaHeight - boxSize) {
+//             dy4 *= -1;
+//             $("#box4").css("backgroundColor", randomColor());
+//         }
+//         $("#box4").css({ left: x4, top: y4 });
 
-        // box5
-        x5 += dx5;
-        y5 += dy5;
-        if (x5 <= 0 || x5 >= areaWidth - boxSize) {
-            dx5 *= -1;
-            $("#box5").css("backgroundColor", randomColor());
-        }
-        if (y5 <= 0 || y5 >= areaHeight - boxSize) {
-            dy5 *= -1;
-            $("#box5").css("backgroundColor", randomColor());
-        }
-        $("#box5").css({ left: x5, top: y5 });
-    }, 20);
-}
+//         // box5
+//         x5 += dx5;
+//         y5 += dy5;
+//         if (x5 <= 0 || x5 >= areaWidth - boxSize) {
+//             dx5 *= -1;
+//             $("#box5").css("backgroundColor", randomColor());
+//         }
+//         if (y5 <= 0 || y5 >= areaHeight - boxSize) {
+//             dy5 *= -1;
+//             $("#box5").css("backgroundColor", randomColor());
+//         }
+//         $("#box5").css({ left: x5, top: y5 });
+//     }, 20);
+// }
 
 function randomColor() {
     const r = Math.floor(Math.random() * 256);
@@ -311,3 +311,32 @@ function randomColor() {
     return `rgb(${r},${g},${b})`;
 }
 
+var ball = null; // 전역 변수로 이동
+
+function putBox(){
+    if (ball !== null) return; // 이미 실행 중이면 재호출하지 않음
+
+    var canvas = document.getElementById('myCanvas');
+    var context = canvas.getContext('2d');
+    var dx = 5;
+    var dy = 5;
+    var y = 100;
+    var x = 100;
+
+    function draw(){
+        context.clearRect(0, 0, 500, 300);
+        context.beginPath();
+        context.fillStyle = "red";
+        context.arc(x, y, 20, 0, 2 * Math.PI, true);
+        context.closePath();
+        context.fill();
+
+        if (x < 20 || x > 500 - 20) dx = -dx;
+        if (y < 20 || y > 300 - 20) dy = -dy;
+
+        x += dx;
+        y += dy;
+    }
+
+    ball = setInterval(draw, 10);
+}
